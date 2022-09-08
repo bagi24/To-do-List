@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    background-image: linear-gradient(120deg, #9ce0d6, #3f5fdf);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 90vh;
+    
+  
+
+header {
+    font-size: 1.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+
+}
+
+form {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .todo-input{
+        padding: 0.5rem;
+        font-size:2rem;
+        border: none;
+        background: white;
+        
+    }
+
+    .todo-btn{
+        padding: 0.5rem;
+        font-size:2rem;
+        border: none;
+        background: #9ce0d6;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        :hover {
+            background: #3f5fdf;
+            color: white;
+        }
+    }
+.select {
+
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    &:hover::after {
+
+        background-color: #9ce0d6;
+        color: blue;
+    }
+
+    &::after {
+        content: "\25BC";
+        position: absolute;
+        top: 0;
+        padding: 1rem;
+        right: 0;
+        background: #3f5fdf;
+        pointer-events: none;
+        transition: all 1s ease;
+
+        
+    }
+}
+
+select {
+
+    -webtik-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #9ce0d6;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+
+
+
+}
+
+}
+
+.todo-conteiner {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+    .todo-list {
+min-width: 30%;
+list-style: none;
+
+        .todoo{
+margin: 0.5rem;
+background: white;
+color: black;
+font-size: 1.5rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: all 1s ease;
+
+
+li {
+
+    flex: 1;
+    padding: 0rem 0.5rem;
+}
+
+
+.complite-btn {
+
+background: #9ce0d6;
+color: white;
+border: none;
+padding: 1rem;
+font-size: 1rem;
+cursor: pointer;
+
+
+
+.fa-check {
+    pointer-events: none;
+}
+}
+
+.delete-btn {
+
+    background: red;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+
+    .fa-trash {
+        pointer-events: none;
+    }
+}
+
+
+
+
+
+        }
+
+    }
+}
+
+
+
+.complited {
+    text-decoration: line-through;
+    
+    
+}
+
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+}

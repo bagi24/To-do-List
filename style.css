@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #9ce0d6, #3f5fdf);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  min-height: 90vh;
+}
+body header {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+body form {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body form .todo-input {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+body form .todo-btn {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #9ce0d6;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+body form .todo-btn :hover {
+  background: #3f5fdf;
+  color: white;
+}
+body form .select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+body form .select:hover::after {
+  background-color: #9ce0d6;
+  color: blue;
+}
+body form .select::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  padding: 1rem;
+  right: 0;
+  background: #3f5fdf;
+  pointer-events: none;
+  transition: all 1s ease;
+}
+body form select {
+  -webtik-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  color: #9ce0d6;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+body .todo-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .todo-conteiner .todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+body .todo-conteiner .todo-list .todoo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+body .todo-conteiner .todo-list .todoo li {
+  flex: 1;
+  padding: 0rem 0.5rem;
+}
+body .todo-conteiner .todo-list .todoo .complite-btn {
+  background: #9ce0d6;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+body .todo-conteiner .todo-list .todoo .complite-btn .fa-check {
+  pointer-events: none;
+}
+body .todo-conteiner .todo-list .todoo .delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+body .todo-conteiner .todo-list .todoo .delete-btn .fa-trash {
+  pointer-events: none;
+}
+body .complited {
+  text-decoration: line-through;
+}
+body .fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */
