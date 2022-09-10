@@ -14,7 +14,6 @@ filterOption.addEventListener('click', filterTodo);
 //functions
 function addTodo(e) {
   e.preventDefault();
-  console.log('holla');
 
   const todoDiv = document.createElement('div');
   todoDiv.classList.add('todoo');
@@ -40,6 +39,7 @@ function addTodo(e) {
 
 function deleteCheck(n) {
   const item = n.target;
+
   if (item.classList[0] === 'delete-btn') {
     const todo = item.parentElement;
     todo.classList.add('fall');
@@ -51,6 +51,36 @@ function deleteCheck(n) {
 
   if (item.classList[0] === 'complite-btn') {
     const todo = item.parentElement;
+    console.log(todo);
     todo.classList.toggle('complited');
   }
+}
+
+
+
+function filterTodo(e) {
+  e.preventDefault();
+  const todos = todoList.childNodes;
+  console.log('todos', todos);
+  todos.forEach(function (n) {
+    switch (e.target.value) {
+      case 'all':
+        n.style.display = 'flex';
+        break;
+      case 'completed':
+        if (n.classList.contains('complited')) {
+          n.style.display = 'flex';
+        } else {
+          n.style.display = 'none';
+        }
+        break;
+      case 'uncompleted':
+        if (!n.classList.contains('complited')) {
+          n.style.display = 'flex';
+        } else {
+          n.style.display = 'none';
+        }
+        break;
+    }
+  });
 }
